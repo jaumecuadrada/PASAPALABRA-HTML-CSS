@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Layout Basic</title>
+</head>
+<body>
+    <header>
+        <h1>PASAPALABRA ISDI-CODERS</h1>
+    </header>
+
+    <nav>
+        <a id="menuPlay" href="#">PLAY</a>
+        <a id="menuInstructions" href="#">INSTRUCTIONS</a>
+        <a id="menuRanking" href="#">RANKING</a>
+        <a id="menuExit" href="#">EXIT</a>
+    </nav>
+
+    <div class="row">
+      
+        <section >
+            <h2 id="titol">WELCOME TO PASAPALABRA APP!!!</h2>
+            <div id="instructions"> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Itaque rem explicabo numquam tenetur reiciendis dolorem ut sint molestias voluptate esse, culpa architecto omnis dignissimos voluptatem non perspiciatis deserunt quaerat sapiente.</div>
+            <div id="rosco" class="rosco hidden">
+                <p id="a" class="alphabet">A</p>
+                <p id="b" class="alphabet">B</p>
+                <p id="c" class="alphabet">C</p>
+                <p id="d" class="alphabet">D</p>
+                <p id="e" class="alphabet">E</p>
+                <p id="f" class="alphabet">F</p>
+                <p id="g" class="alphabet">G</p>
+                <p id="h" class="alphabet">H</p>
+                <p id="i" class="alphabet">I</p>
+                <p id="j" class="alphabet">J</p>
+                <p id="k" class="alphabet">K</p>
+                <p id="l" class="alphabet">L</p>
+                <p id="m" class="alphabet">M</p>
+                <p id="n" class="alphabet">N</p>
+                <p id="ñ" class="alphabet">Ñ</p>
+                <p id="o" class="alphabet">O</p>
+                <p id="p" class="alphabet">P</p>
+                <p id="q" class="alphabet">Q</p>
+                <p id="r" class="alphabet">R</p>
+                <p id="s" class="alphabet">S</p>
+                <p id="t" class="alphabet">T</p>
+                <p id="u" class="alphabet">U</p>
+                <p id="v" class="alphabet">V</p>
+                <p id="w" class="alphabet">W</p>
+                <p id="x" class="alphabet">X</p>
+                <p id="y" class="alphabet">Y</p>
+                <p id="z" class="alphabet">Z</p>
+              </div>
+              <div>
+                <table id="rankingTable" class="hidden">
+                    <tr>
+                    <td class="rankingUp">POSICIÓ</td>
+                    <td class="rankingUp">NOM</td>
+                    <td class="rankingUp">PUNTUACIÓ</td>
+                    </tr>
+                    <tr>
+                    <td>1</td>
+                    <td>Jaume Cuadrada</td>
+                    <td>hola</td>
+                    </tr>
+                    <tr>
+                    <td>2</td>
+                    <td>Laia Gisbert</td>
+                    <td>hola</td>
+                    </tr>
+                    <tr>
+                    <td>3</td>
+                    <td>Mussyneres</td>
+                    <td>hola</td>
+                    </tr>
+                    <tr>
+                    <td>4</td>
+                    <td>Doreen Alerosa</td>
+                    <td>hola</td>
+                    </tr>
+                </table>
+                </div>
+            
+            <div>
+                <h1 id="exit" class="hidden">FINS AVIAT!</h1>
+            </div>
+            <div id="showTimer" class="hidden">
+                <button id="startTimer">EMPEZAR EL JUEGO!</button>  
+            </div> 
+        </section>
+        <aside id="aside" class="hidden">
+            <h2 id="letterTitles"></h2>
+            <p id="questions"></p>
+            <form>
+                <input id="inputAnswer" type="text" name="answer" placeholder="resposta">
+                <button id="sendWord" type="submit" >enviar</button>
+                <button id="pasapalabra" type="button">pasapalabra</button>
+                <br><br>
+                <div id="timer"></div>
+                <br><br>
+            </form>
+        </aside>
+    
+
+    </div>
+
+    <footer>
+        <h2>footer</h2>
+    </footer>
+
+<script type="module" src="main.js" defer></script>
+</body>
+</html>
