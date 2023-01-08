@@ -227,10 +227,12 @@ const restartBorders = () => {
 const gameTimer = () => {
   const tick = () => {
     timerElement.innerHTML = time;
-    time--;
 
     if (time === 0) {
       clearInterval(timer);
+      endGame();
+    } else {
+      time--;
     }
   };
 
@@ -313,29 +315,24 @@ const addScores = () => {
   let scoreCell = document.createElement("td");
   scoreCell.innerHTML = userScore;
 
-  // Agregar las celdas a la fila
   newRow.appendChild(posCell);
   newRow.appendChild(nameCell);
   newRow.appendChild(scoreCell);
 
-  // Agregar la fila a la tabla
   document.getElementById("rankingTable").appendChild(newRow);
 };
 
 function sortTable() {
-  // Obtener todas las filas de la tabla (excepto la fila de encabezado)
   var rows = Array.from(
     document.querySelectorAll("#rankingTable tr:not(:first-child)")
   );
 
-  // Ordenar las filas por puntación (de mayor a menor)
   rows.sort(function (row1, row2) {
     var score1 = parseInt(row1.querySelector("td:last-child").innerHTML);
     var score2 = parseInt(row2.querySelector("td:last-child").innerHTML);
     return score2 - score1;
   });
 
-  // Remover todas las filas de la tabla
   rows.forEach(function (row) {
     row.parentNode.removeChild(row);
   });
@@ -361,3 +358,4 @@ sendWord.addEventListener("click", checkAllIsAnswered);
 startTimerButton.addEventListener("click", gameTimer);
 startTimerButton.addEventListener("click", showRosco);
 startTimerButton.addEventListener("click", getName);
+
